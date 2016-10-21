@@ -36,6 +36,10 @@ channel_access_token = 'xMcP0bVZRhm33RNqosj3u6ofrfvdEswVvpYZKc6DMoN3xKSKwa/2XG8z
 line_bot_api = LineBotApi(channel_access_token)
 handler = WebhookHandler(channel_secret)
 
+@app.route("/", methods=['GET'])
+def index():
+    return 'OK'
+
 
 @app.route("/callback", methods=['POST'])
 def callback():
